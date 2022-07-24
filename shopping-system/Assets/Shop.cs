@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Shop : MonoBehaviour
 {
@@ -19,6 +20,8 @@ public class Shop : MonoBehaviour
     Transform shopScrollView;
 
     GameObject itemTemplate;
+    GameObject g;
+    private Button buyBtn;
 
     private void Start()
     {
@@ -26,10 +29,13 @@ public class Shop : MonoBehaviour
         int lenght = ShopItemsList.Count;
         for (int i = 0; i < lenght; i++)
         {
-            var g = Instantiate(itemTemplate, shopScrollView);
+            g = Instantiate(itemTemplate, shopScrollView);
             g.transform.GetChild(0).GetComponent<Image>().sprite = ShopItemsList[i].Image;
-            g.transform.GetChild(1).GetComponent<Text>().text = ShopItemsList[i].Price.ToString();
-            g.transform.GetChild(2).GetComponent<Button>().interactable = !ShopItemsList[i].IsPurchased;
+            g.transform.GetChild(1).GetChild(0).GetComponent<TextMeshProUGUI>().text = ShopItemsList[i].Price.ToString();
+            buyBtn = g.transform.GetChild(2).GetComponent<Button>();
+            buyBtn.interactable = !ShopItemsList[i].IsPurchased;
+            var i1 = i;
+            buyBtn.onClick.AddListener(() => OnShıpItemBtnClicked(i1));
 
         }
         Destroy(itemTemplate);
@@ -38,7 +44,7 @@ public class Shop : MonoBehaviour
     public void OnShıpItemBtnClicked(int itemIndex)
     {
         ShopItemsList[itemIndex].IsPurchased = true;
-
         shopScrollView.GetChild(itemIndex).GetChild(2).GetComponent<Button>().interactable = false;
+        shopScrollView.GetChild(itemIndex).GetChild(2).GetChild(0).GetComponent<Text>().text = "Purchased";
     }
 }

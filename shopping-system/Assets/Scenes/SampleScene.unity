@@ -738,8 +738,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShopItemsList:
-  - Image: {fileID: 0}
-    Price: 0
+  - Image: {fileID: 21300000, guid: af519dbcc8081014abc5a5b86d52b162, type: 3}
+    Price: 200
     IsPurchased: 0
   shopScrollView: {fileID: 292583689}
 --- !u!1 &705507993
@@ -1047,9 +1047,9 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 2041469801}
   - {fileID: 1972984982}
   - {fileID: 2142005705}
-  - {fileID: 2041469801}
   m_Father: {fileID: 586541078}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1424,19 +1424,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1814816760}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 586541081}
-        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
-        m_MethodName: "OnSh\u0131pItemBtnClicked"
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1814816760
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1506,7 +1494,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1415858859}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -1659,7 +1647,7 @@ RectTransform:
   m_Children:
   - {fileID: 284676609}
   m_Father: {fileID: 1415858859}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -1780,11 +1768,11 @@ RectTransform:
   m_Children:
   - {fileID: 1427363723}
   m_Father: {fileID: 1415858859}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 3.300003, y: -24.971008}
+  m_AnchoredPosition: {x: 3.2999878, y: -24.971008}
   m_SizeDelta: {x: -65.399994, y: -80.05701}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2142005706
