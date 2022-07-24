@@ -43,8 +43,19 @@ public class Shop : MonoBehaviour
 
     public void OnShıpItemBtnClicked(int itemIndex)
     {
-        ShopItemsList[itemIndex].IsPurchased = true;
-        shopScrollView.GetChild(itemIndex).GetChild(2).GetComponent<Button>().interactable = false;
-        shopScrollView.GetChild(itemIndex).GetChild(2).GetChild(0).GetComponent<Text>().text = "Purchased";
+        if (Game.Instance.HasEnoughCoins(ShopItemsList[itemIndex].Price))
+        {
+            Game.Instance.UseCoins(ShopItemsList[itemIndex].Price);
+            ShopItemsList[itemIndex].IsPurchased = true;
+            shopScrollView.GetChild(itemIndex).GetChild(2).GetComponent<Button>().interactable = false;
+            shopScrollView.GetChild(itemIndex).GetChild(2).GetChild(0).GetComponent<Text>().text = "Purchased";
+        }
+        else
+        {
+            Debug.Log("You don't have enough coins");
+        }
+
     }
 }
+
+//uımanager ile bölüşecek
