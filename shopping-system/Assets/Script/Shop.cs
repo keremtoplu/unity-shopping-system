@@ -36,17 +36,17 @@ public class Shop : MonoBehaviour
             buyBtn = g.transform.GetChild(2).GetComponent<Button>();
             buyBtn.interactable = !ShopItemsList[i].IsPurchased;
             var i1 = i;
-            buyBtn.onClick.AddListener(() => OnShıpItemBtnClicked(i1));
+            buyBtn.onClick.AddListener(() => ShopItemBtnClicked(i1));
 
         }
         Destroy(itemTemplate);
     }
 
-    public void OnShıpItemBtnClicked(int itemIndex)
+    public void ShopItemBtnClicked(int itemIndex)
     {
-        if (Game.Instance.HasEnoughCoins(ShopItemsList[itemIndex].Price))
+        if (ScoreManager.Instance.HasEnoughCoins(ShopItemsList[itemIndex].Price))
         {
-            Game.Instance.UseCoins(ShopItemsList[itemIndex].Price);
+            ScoreManager.Instance.UseCoins(ShopItemsList[itemIndex].Price);
             ShopItemsList[itemIndex].IsPurchased = true;
             shopScrollView.GetChild(itemIndex).GetChild(2).GetComponent<Button>().interactable = false;
             shopScrollView.GetChild(itemIndex).GetChild(2).GetChild(0).GetComponent<Text>().text = "Purchased";
