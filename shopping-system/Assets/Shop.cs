@@ -18,7 +18,8 @@ public class Shop : MonoBehaviour
 
     [SerializeField]
     Transform shopScrollView;
-
+    [SerializeField]
+    private TextMeshProUGUI notEnoughCoinsText;
     GameObject itemTemplate;
     GameObject g;
     private Button buyBtn;
@@ -52,7 +53,8 @@ public class Shop : MonoBehaviour
         }
         else
         {
-            Debug.Log("You don't have enough coins");
+            //leantween eklenecek
+            notEnoughCoinsText.gameObject.SetActive(true);
         }
 
     }
