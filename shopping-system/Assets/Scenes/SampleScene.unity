@@ -714,6 +714,30 @@ MonoBehaviour:
   - Image: {fileID: 21300000, guid: af519dbcc8081014abc5a5b86d52b162, type: 3}
     Price: 600
     IsPurchased: 0
+  - Image: {fileID: 21300000, guid: af519dbcc8081014abc5a5b86d52b162, type: 3}
+    Price: 1000
+    IsPurchased: 0
+  - Image: {fileID: 21300000, guid: af519dbcc8081014abc5a5b86d52b162, type: 3}
+    Price: 1000
+    IsPurchased: 0
+  - Image: {fileID: 21300000, guid: af519dbcc8081014abc5a5b86d52b162, type: 3}
+    Price: 1000
+    IsPurchased: 0
+  - Image: {fileID: 21300000, guid: af519dbcc8081014abc5a5b86d52b162, type: 3}
+    Price: 1000
+    IsPurchased: 0
+  - Image: {fileID: 21300000, guid: af519dbcc8081014abc5a5b86d52b162, type: 3}
+    Price: 1000
+    IsPurchased: 0
+  - Image: {fileID: 21300000, guid: af519dbcc8081014abc5a5b86d52b162, type: 3}
+    Price: 1000
+    IsPurchased: 0
+  - Image: {fileID: 21300000, guid: af519dbcc8081014abc5a5b86d52b162, type: 3}
+    Price: 1000
+    IsPurchased: 0
+  - Image: {fileID: 21300000, guid: af519dbcc8081014abc5a5b86d52b162, type: 3}
+    Price: 1000
+    IsPurchased: 0
   shopScrollView: {fileID: 292583689}
   notEnoughCoinsText: {fileID: 1195429430}
 --- !u!1 &689909018
